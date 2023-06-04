@@ -4,8 +4,17 @@
     "description": "This is first chrome extension",
     "manifest_version": 3,
     "author": "Iris",
-    "action": {
-        "default_popup": "index.html",
-        "default_title": "First Chrome Extension"
-    }
+    "icons": {
+        "16": "images/favicon.png",
+        "32": "images/favicon.png"
+    },
+    "content_script": [
+        {
+            "js": ["scripts/content.js"],
+            "matches": [
+                "https://developer.chrome.com/docs/extensions/*",
+                "https://developer.chrome.com/docs/webstore/*"
+            ]
+        }
+    ]
 }
