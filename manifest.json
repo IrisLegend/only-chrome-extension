@@ -4,17 +4,15 @@
     "description": "This is first chrome extension",
     "manifest_version": 3,
     "author": "Iris",
+    "action": {
+        "default_popup": "index.html"
+    },
     "icons": {
         "16": "images/favicon.png",
         "32": "images/favicon.png"
     },
-    "content_script": [
-        {
-            "js": ["scripts/content.js"],
-            "matches": [
-                "https://developer.chrome.com/docs/extensions/*",
-                "https://developer.chrome.com/docs/webstore/*"
-            ]
-        }
-    ]
+    "host_permissions": [
+        "https://developer.chrome.com/*"
+    ],
+    "permissions": [ "tabGroups" ]
 }
